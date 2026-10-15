@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fruty Fantasty
 
-## Getting Started
+Una tienda online de frutas frescas y exóticas. Fruty Fantasty es una aplicación de comercio electrónico que permite a los clientes descubrir, cotizar y pedir frutas de temporada y especiales a través de una experiencia web moderna y atractiva.
 
-First, run the development server:
+## 📝 Descripción General
+
+Fruty Fantasty es una aplicación completa de comercio electrónico construida con **Next.js 16** y **TypeScript** que incluye:
+
+- **Catálogo de productos** - Lista de frutas frescas y especiales con descripción, precio y disponibilidad
+- **Sistema de pedidos** - Formulario para registrar pedidos con validación de cliente, teléfono y dirección
+- **Conexión a base de datos** - Integración con MongoDB para persistencia de datos
+- **Interfaz responsiva** - Diseño que se adapta desde dispositivos móviles hasta desktop
+
+## 🛠️ Tecnologías Utilizadas
+
+- **Next.js 16** - Framework React con App Router
+- **TypeScript** - Tipado estático para mayor seguridad
+- **Tailwind CSS** - Estilizado utilitario
+- **MongoDB** - Base de datos NoSQL para persistencia
+
+## 📦 Funcionalidades Principales
+
+1. **Catálogo de productos** - Visualizar frutas disponibles con sus características
+2. **Registro de pedidos** - Formulario validado para crear pedidos
+3. **Gestión de inventario** - Control de stock y disponibilidad
+4. **Interfaz moderna** - Diseño visual con gradientes y animaciones sutiles
+
+## 🚀 Cómo Empezar
+
+Ejecutar el servidor de desarrollo:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
+# o
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000) en el navegador para ver el resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Estructura del Proyecto
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── src/                  # Código fuente
+│   ├── app/              # Next.js 16 App Router
+│   │   ├── page.tsx      # Página principal
+│   │   ├── layout.tsx    # Layout raíz
+│   │   ├── api/order/    # API POST /api/order
+│   │   └── api/products/ # API GET /api/products
+│   └── products/         # Página de catálogo
+├── backend/              # Lógica y modelos
+│   ├── mongodb.ts        # Conexión a base de datos
+│   ├── order.ts          # Interfaces de pedidos
+│   └── products.ts       # Interfaces de productos
+├── package.json
+├── next.config.ts
+└── tsconfig.json
+```
 
-## Learn More
+## 📱 Páginas Disponibles
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **/** - Página principal (Home)
+- **/products** - Catálogo de productos
+- **/api/products** - API para obtener productos
+- **/api/order** - API para registrar pedidos
